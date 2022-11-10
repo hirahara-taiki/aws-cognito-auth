@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>aws_cognito_auth package &mdash; aws-cognito-auth 0.1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to aws-cognito-auth’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> aws-cognito-auth
+          </a>
+              <div class="version">
+                0.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">API</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">aws_cognito_auth package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-aws_cognito_auth.auth">aws_cognito_auth.auth module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-aws_cognito_auth.cli">aws_cognito_auth.cli module</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">aws-cognito-auth</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">aws_cognito_auth package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/aws_cognito_auth.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="aws-cognito-auth-package">
+<h1>aws_cognito_auth package<a class="headerlink" href="#aws-cognito-auth-package" title="Permalink to this heading"></a></h1>
+<div class="section" id="module-aws_cognito_auth.auth">
+<span id="aws-cognito-auth-auth-module"></span><h2>aws_cognito_auth.auth module<a class="headerlink" href="#module-aws_cognito_auth.auth" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="aws_cognito_auth.auth.AuthenticationResult">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">aws_cognito_auth.auth.</span></span><span class="sig-name descname"><span class="pre">AuthenticationResult</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">AccessToken</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">IdToken</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">RefreshToken</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">TokenType</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Expiration</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">datetime</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aws_cognito_auth.auth.AuthenticationResult" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>AuthenticationResult from Cognito user pool</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="aws_cognito_auth.auth.AuthenticationResult.AccessToken">
+<span class="sig-name descname"><span class="pre">AccessToken</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#aws_cognito_auth.auth.AuthenticationResult.AccessToken" title="Permalink to this definition"></a></dt>
+<dd><p>access token. Expires in 60 minutes by default</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="aws_cognito_auth.auth.AuthenticationResult.Expiration">
+<span class="sig-name descname"><span class="pre">Expiration</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">datetime</span></em><a class="headerlink" href="#aws_cognito_auth.auth.AuthenticationResult.Expiration" title="Permalink to this definition"></a></dt>
+<dd><p>expiration date of access token and id token</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>datetime</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="aws_cognito_auth.auth.AuthenticationResult.Expired">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Expired</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#aws_cognito_auth.auth.AuthenticationResult.Expired" title="Permalink to this definition"></a></dt>
+<dd><p>Returns True if expired</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="aws_cognito_auth.auth.AuthenticationResult.ExpiresSoon">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ExpiresSoon</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#aws_cognito_auth.auth.AuthenticationResult.ExpiresSoon" title="Permalink to this definition"></a></dt>
+<dd><p>Returns True if expires within 5 minutes</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="aws_cognito_auth.auth.AuthenticationResult.IdToken">
+<span class="sig-name descname"><span class="pre">IdToken</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#aws_cognito_auth.auth.AuthenticationResult.IdToken" title="Permalink to this definition"></a></dt>
+<dd><p>id token. Expires in 60 minutes by default</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="aws_cognito_auth.auth.AuthenticationResult.RefreshToken">
+<span class="sig-name descname"><span class="pre">RefreshToken</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#aws_cognito_auth.auth.AuthenticationResult.RefreshToken" title="Permalink to this definition"></a></dt>
+<dd><p>refresh token. Expires in 30 days by default</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="aws_cognito_auth.auth.AuthenticationResult.TokenType">
+<span class="sig-name descname"><span class="pre">TokenType</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#aws_cognito_auth.auth.AuthenticationResult.TokenType" title="Permalink to this definition"></a></dt>
+<dd><p>token type</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="aws_cognito_auth.auth.AuthenticationResult.delete">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">profile</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aws_cognito_auth.auth.AuthenticationResult.delete" title="Permalink to this definition"></a></dt>
+<dd><p>delete profile from <code class="docutils literal notranslate"><span class="pre">~/.aws/cognito</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>profile</strong> (<em>str</em>) – name of aws profile</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="aws_cognito_auth.auth.AuthenticationResult.dump">
+<span class="sig-name descname"><span class="pre">dump</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">profile</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aws_cognito_auth.auth.AuthenticationResult.dump" title="Permalink to this definition"></a></dt>
+<dd><p>dump arguments to <code class="docutils literal notranslate"><span class="pre">~/.aws/cognito</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>profile</strong> (<em>str</em>) – name of aws profile</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="aws_cognito_auth.auth.AuthenticationResult.load">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">profile</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#aws_cognito_auth.auth.AuthenticationResult" title="aws_cognito_auth.auth.AuthenticationResult"><span class="pre">AuthenticationResult</span></a></span></span><a class="headerlink" href="#aws_cognito_auth.auth.AuthenticationResult.load" title="Permalink to this definition"></a></dt>
+<dd><p>load arguments from <code class="docutils literal notranslate"><span class="pre">~/.aws/cognito</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>profile</strong> (<em>str</em>) – name of aws profile</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>FileNotFoundError</strong> – <code class="docutils literal notranslate"><span class="pre">~/.aws/cognito</span></code> is not found</p></li>
+<li><p><strong>FileNotFoundError</strong> – profile is not found</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#aws_cognito_auth.auth.AuthenticationResult" title="aws_cognito_auth.auth.AuthenticationResult">AuthenticationResult</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="aws_cognito_auth.auth.CognitoAuthenticator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">aws_cognito_auth.auth.</span></span><span class="sig-name descname"><span class="pre">CognitoAuthenticator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">profile</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">username</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_pool_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">client_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">identity_pool_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aws_cognito_auth.auth.CognitoAuthenticator" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="aws_cognito_auth.auth.CognitoAuthenticator.authentication_result">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">authentication_result</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#aws_cognito_auth.auth.AuthenticationResult" title="aws_cognito_auth.auth.AuthenticationResult"><span class="pre">AuthenticationResult</span></a></em><a class="headerlink" href="#aws_cognito_auth.auth.CognitoAuthenticator.authentication_result" title="Permalink to this definition"></a></dt>
+<dd><p>authentication result from cognito user pool</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#aws_cognito_auth.auth.AuthenticationResult" title="aws_cognito_auth.auth.AuthenticationResult">AuthenticationResult</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="aws_cognito_auth.auth.CognitoAuthenticator.change_password">
+<span class="sig-name descname"><span class="pre">change_password</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">previous_password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">proposed_password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aws_cognito_auth.auth.CognitoAuthenticator.change_password" title="Permalink to this definition"></a></dt>
+<dd><p>Change password. You must sign in.</p>
+<p class="rubric">Example</p>
+<p>usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cognito</span> <span class="o">=</span> <span class="n">CognitoAuthenticator</span><span class="p">(</span><span class="s2">&quot;your-profile&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cognito</span><span class="o">.</span><span class="n">change_password</span><span class="p">()</span>
+<span class="go">Previous Password:</span>
+<span class="go">New Password:</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="aws_cognito_auth.auth.CognitoAuthenticator.confirm_forgot_password">
+<span class="sig-name descname"><span class="pre">confirm_forgot_password</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">code</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aws_cognito_auth.auth.CognitoAuthenticator.confirm_forgot_password" title="Permalink to this definition"></a></dt>
+<dd><p>Confirm password change</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>code</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – confirmation code. Defaults to None.</p></li>
+<li><p><strong>password</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – new password. Defaults to None.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="aws_cognito_auth.auth.CognitoAuthenticator.confirm_sign_up">
+<span class="sig-name descname"><span class="pre">confirm_sign_up</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">code</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aws_cognito_auth.auth.CognitoAuthenticator.confirm_sign_up" title="Permalink to this definition"></a></dt>
+<dd><p>Confirm sign-up. Must be done before signing in.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>code</strong> (<em>str</em><em>, </em><em>optional</em>) – confirmation code sent to email</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<p>usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cognito</span> <span class="o">=</span> <span class="n">CognitoAuthenticator</span><span class="p">(</span><span class="s2">&quot;your-profile&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cognito</span><span class="o">.</span><span class="n">confirm_sign_up</span><span class="p">(</span><span class="s2">&quot;012345&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="aws_cognito_auth.auth.CognitoAuthenticator.console_url">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">console_url</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#aws_cognito_auth.auth.CognitoAuthenticator.console_url" title="Permalink to this definition"></a></dt>
+<dd><p>URL to sign in to the AWS Management Console</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="aws_cognito_auth.auth.CognitoAuthenticator.credentials">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">credentials</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#aws_cognito_auth.auth.Credentials" title="aws_cognito_auth.auth.Credentials"><span class="pre">Credentials</span></a></em><a class="headerlink" href="#aws_cognito_auth.auth.CognitoAuthenticator.credentials" title="Permalink to this definition"></a></dt>
+<dd><p>aws credentials of IAM role associated with cognito</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="aws_cognito_auth.auth.CognitoAuthenticator.delete_credentials">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">delete_credentials</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">profile</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aws_cognito_auth.auth.CognitoAuthenticator.delete_credentials" title="Permalink to this definition"></a></dt>
+<dd><p>Remove the credentials corresponding to <code class="docutils literal notranslate"><span class="pre">profile</span></code> from <code class="docutils literal notranslate"><span class="pre">~/.aws</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>profile</strong> (<em>str</em>) – name of AWS profile</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="aws_cognito_auth.auth.CognitoAuthenticator.forgot_password">
+<span class="sig-name descname"><span class="pre">forgot_password</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aws_cognito_auth.auth.CognitoAuthenticator.forgot_password" title="Permalink to this definition"></a></dt>
+<dd><p>Reset your password when you forget it.</p>
+<p class="rubric">Example</p>
+<p>usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cognito</span> <span class="o">=</span> <span class="n">CognitoAuthenticator</span><span class="p">(</span><span class="s2">&quot;your-profile&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cognito</span><span class="o">.</span><span class="n">forgot_password</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="aws_cognito_auth.auth.CognitoAuthenticator.identity_id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">identity_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#aws_cognito_auth.auth.CognitoAuthenticator.identity_id" title="Permalink to this definition"></a></dt>
+<dd><p>identity id from cognito user pool</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="aws_cognito_auth.auth.CognitoAuthenticator.provider_name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">provider_name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#aws_cognito_auth.auth.CognitoAuthenticator.provider_name" title="Permalink to this definition"></a></dt>
+<dd><p>name of ID Provider</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="aws_cognito_auth.auth.CognitoAuthenticator.resend_confirmation_code">
+<span class="sig-name descname"><span class="pre">resend_confirmation_code</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aws_cognito_auth.auth.CognitoAuthenticator.resend_confirmation_code" title="Permalink to this definition"></a></dt>
+<dd><p>Resend confirmation code when sign-up fails.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="aws_cognito_auth.auth.CognitoAuthenticator.setup_software_mfa">
+<span class="sig-name descname"><span class="pre">setup_software_mfa</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">issuer</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aws_cognito_auth.auth.CognitoAuthenticator.setup_software_mfa" title="Permalink to this definition"></a></dt>
+<dd><p>Set up MFA with software tokens.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>issuer</strong> (<em>str</em>) – service provider</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<p>usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cognito</span> <span class="o">=</span> <span class="n">CognitoAuthenticator</span><span class="p">(</span><span class="s2">&quot;your-profile&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cognito</span><span class="o">.</span><span class="n">setup_software_mfa</span><span class="p">(</span><span class="s2">&quot;your-app&quot;</span><span class="p">)</span>
+<span class="go">User Code: 012345 # Scan the QR code with an app such as GoogleAuthenticator to obtain the code for authentication</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="aws_cognito_auth.auth.CognitoAuthenticator.sign_in">
+<span class="sig-name descname"><span class="pre">sign_in</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#aws_cognito_auth.auth.AuthenticationResult" title="aws_cognito_auth.auth.AuthenticationResult"><span class="pre">AuthenticationResult</span></a></span></span><a class="headerlink" href="#aws_cognito_auth.auth.CognitoAuthenticator.sign_in" title="Permalink to this definition"></a></dt>
+<dd><p>sign in. Sign in again, even if the session has not expired.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>RuntimeError</strong> – unknown challenge</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#aws_cognito_auth.auth.AuthenticationResult" title="aws_cognito_auth.auth.AuthenticationResult">AuthenticationResult</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="aws_cognito_auth.auth.CognitoAuthenticator.sign_up">
+<span class="sig-name descname"><span class="pre">sign_up</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aws_cognito_auth.auth.CognitoAuthenticator.sign_up" title="Permalink to this definition"></a></dt>
+<dd><p>sign up to cognito user pool.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>password</strong> (<em>str</em><em>, </em><em>optional</em>) – Your password. If not specified, you will be asked interactively. Default to None.</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<p>usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">cognito</span> <span class="o">=</span> <span class="n">CognitoAuthenticator</span><span class="p">(</span><span class="s2">&quot;your-profile&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">cognito</span><span class="o">.</span><span class="n">sign_up</span><span class="p">()</span>
+<span class="go">PASSWORD:</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="aws_cognito_auth.auth.Credentials">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">aws_cognito_auth.auth.</span></span><span class="sig-name descname"><span class="pre">Credentials</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">AccessKeyId</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SecretKey</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SessionToken</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Expiration</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">datetime</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aws_cognito_auth.auth.Credentials" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>aws credentials from cognito identity pool</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="aws_cognito_auth.auth.Credentials.AccessKeyId">
+<span class="sig-name descname"><span class="pre">AccessKeyId</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#aws_cognito_auth.auth.Credentials.AccessKeyId" title="Permalink to this definition"></a></dt>
+<dd><p>access key id. Expires in 60 minutes by default</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="aws_cognito_auth.auth.Credentials.Expiration">
+<span class="sig-name descname"><span class="pre">Expiration</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">datetime</span></em><a class="headerlink" href="#aws_cognito_auth.auth.Credentials.Expiration" title="Permalink to this definition"></a></dt>
+<dd><p>expiration date</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>datetime</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="aws_cognito_auth.auth.Credentials.Expired">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Expired</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#aws_cognito_auth.auth.Credentials.Expired" title="Permalink to this definition"></a></dt>
+<dd><p>Returns True if expired</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="aws_cognito_auth.auth.Credentials.ExpiresSoon">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ExpiresSoon</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#aws_cognito_auth.auth.Credentials.ExpiresSoon" title="Permalink to this definition"></a></dt>
+<dd><p>Returns True if expires within 5 minutes</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="aws_cognito_auth.auth.Credentials.SecretKey">
+<span class="sig-name descname"><span class="pre">SecretKey</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#aws_cognito_auth.auth.Credentials.SecretKey" title="Permalink to this definition"></a></dt>
+<dd><p>secret key. Expires in 60 minutes by default</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="aws_cognito_auth.auth.Credentials.SessionToken">
+<span class="sig-name descname"><span class="pre">SessionToken</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#aws_cognito_auth.auth.Credentials.SessionToken" title="Permalink to this definition"></a></dt>
+<dd><p>session token. Expires in 60 minutes by default</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="aws_cognito_auth.auth.Credentials.delete">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">profile</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aws_cognito_auth.auth.Credentials.delete" title="Permalink to this definition"></a></dt>
+<dd><p>delete profile from <code class="docutils literal notranslate"><span class="pre">~/.aws/credentials</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>profile</strong> (<em>str</em>) – name of aws profile</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="aws_cognito_auth.auth.Credentials.dump">
+<span class="sig-name descname"><span class="pre">dump</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">profile</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aws_cognito_auth.auth.Credentials.dump" title="Permalink to this definition"></a></dt>
+<dd><p>dump arguments to <code class="docutils literal notranslate"><span class="pre">~/.aws/credentials</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>profile</strong> (<em>str</em>) – name of aws profile</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="aws_cognito_auth.auth.Credentials.load">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">profile</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#aws_cognito_auth.auth.Credentials" title="aws_cognito_auth.auth.Credentials"><span class="pre">Credentials</span></a></span></span><a class="headerlink" href="#aws_cognito_auth.auth.Credentials.load" title="Permalink to this definition"></a></dt>
+<dd><p>load arguments from <code class="docutils literal notranslate"><span class="pre">~/.aws/credentials</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>profile</strong> (<em>str</em>) – name of aws profile</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>FileNotFoundError</strong> – <code class="docutils literal notranslate"><span class="pre">~/.aws/credentials</span></code> is not found</p></li>
+<li><p><strong>FileNotFoundError</strong> – profile is not found</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#aws_cognito_auth.auth.Credentials" title="aws_cognito_auth.auth.Credentials">Credentials</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-aws_cognito_auth.cli">
+<span id="aws-cognito-auth-cli-module"></span><h2>aws_cognito_auth.cli module<a class="headerlink" href="#module-aws_cognito_auth.cli" title="Permalink to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="aws_cognito_auth.cli.command_auth">
+<span class="sig-prename descclassname"><span class="pre">aws_cognito_auth.cli.</span></span><span class="sig-name descname"><span class="pre">command_auth</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Namespace</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aws_cognito_auth.cli.command_auth" title="Permalink to this definition"></a></dt>
+<dd><p>Retrieve your Cognito credentials and AWS credentials and store them in <code class="docutils literal notranslate"><span class="pre">~/.aws/cognito</span></code> and <code class="docutils literal notranslate"><span class="pre">~/.aws/credentials</span></code> respectively.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>args</strong> (<em>Namespace</em>) – command line arguments</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="aws_cognito_auth.cli.command_change_password">
+<span class="sig-prename descclassname"><span class="pre">aws_cognito_auth.cli.</span></span><span class="sig-name descname"><span class="pre">command_change_password</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Namespace</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aws_cognito_auth.cli.command_change_password" title="Permalink to this definition"></a></dt>
+<dd><p>Change password</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>args</strong> (<em>Namespace</em>) – command line arguments</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="aws_cognito_auth.cli.command_console">
+<span class="sig-prename descclassname"><span class="pre">aws_cognito_auth.cli.</span></span><span class="sig-name descname"><span class="pre">command_console</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Namespace</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aws_cognito_auth.cli.command_console" title="Permalink to this definition"></a></dt>
+<dd><p>Open the AWS Management Console</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>args</strong> (<em>Namespace</em>) – command line arguments</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="aws_cognito_auth.cli.command_delete_credentials_cache">
+<span class="sig-prename descclassname"><span class="pre">aws_cognito_auth.cli.</span></span><span class="sig-name descname"><span class="pre">command_delete_credentials_cache</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Namespace</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aws_cognito_auth.cli.command_delete_credentials_cache" title="Permalink to this definition"></a></dt>
+<dd><p>delete profile from <code class="docutils literal notranslate"><span class="pre">~/.aws/cognito</span></code> and <code class="docutils literal notranslate"><span class="pre">~/.aws/credentials</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>args</strong> (<em>Namespace</em>) – command line arguments</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="aws_cognito_auth.cli.command_enable_mfa">
+<span class="sig-prename descclassname"><span class="pre">aws_cognito_auth.cli.</span></span><span class="sig-name descname"><span class="pre">command_enable_mfa</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Namespace</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aws_cognito_auth.cli.command_enable_mfa" title="Permalink to this definition"></a></dt>
+<dd><p>Enable two-step verification</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>args</strong> (<em>Namespace</em>) – command line arguments</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="aws_cognito_auth.cli.command_forgot_password">
+<span class="sig-prename descclassname"><span class="pre">aws_cognito_auth.cli.</span></span><span class="sig-name descname"><span class="pre">command_forgot_password</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Namespace</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aws_cognito_auth.cli.command_forgot_password" title="Permalink to this definition"></a></dt>
+<dd><p>Reset your password when you forget it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>args</strong> (<em>Namespace</em>) – command line arguments</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="aws_cognito_auth.cli.command_re_signup">
+<span class="sig-prename descclassname"><span class="pre">aws_cognito_auth.cli.</span></span><span class="sig-name descname"><span class="pre">command_re_signup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Namespace</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aws_cognito_auth.cli.command_re_signup" title="Permalink to this definition"></a></dt>
+<dd><p>Redo the verification process if you failed to obtain a verification code during sign-up.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>args</strong> (<em>Namespace</em>) – command line arguments</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="aws_cognito_auth.cli.command_register">
+<span class="sig-prename descclassname"><span class="pre">aws_cognito_auth.cli.</span></span><span class="sig-name descname"><span class="pre">command_register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Namespace</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aws_cognito_auth.cli.command_register" title="Permalink to this definition"></a></dt>
+<dd><p>save profile to <code class="docutils literal notranslate"><span class="pre">~/.aws/config</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>args</strong> (<em>Namespace</em>) – command line arguments</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="aws_cognito_auth.cli.command_signup">
+<span class="sig-prename descclassname"><span class="pre">aws_cognito_auth.cli.</span></span><span class="sig-name descname"><span class="pre">command_signup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Namespace</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#aws_cognito_auth.cli.command_signup" title="Permalink to this definition"></a></dt>
+<dd><p>Sign up for the service. You must be registered in config beforehand with the “register” command.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>args</strong> (<em>Namespace</em>) – command line arguments</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="aws_cognito_auth.cli.main">
+<span class="sig-prename descclassname"><span class="pre">aws_cognito_auth.cli.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aws_cognito_auth.cli.main" title="Permalink to this definition"></a></dt>
+<dd><p>Entry point when the command is executed</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to aws-cognito-auth’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, hirahara.taiki@gmail.com.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

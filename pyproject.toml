@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "aws-cognito-auth"
+version = "0.1.0"
+description = ""
+authors = ["Hirahara. Taiki <hirahara.taiki@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+boto3 = "^1.26.1"
+qrcode = "^7.3.1"
+PyJWT = "^2.6.0"
+Pillow = "^9.3.0"
+pytz = "^2022.6"
+tzlocal = "^4.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+awscli = "^1.27.1"
+Sphinx = "5.1.1"
+sphinx-rtd-theme = "^1.1.1"
+
+[tool.poetry.scripts]
+aws-cognito-auth = "aws_cognito_auth.cli:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
